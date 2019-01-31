@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<style>
+.mySlides {display:none;}
+
+.w3-lobster {
+  font-family: "Lobster", serif;
+}
+</style>
+
+<style>
+ body{
+            background:url('https://image.freepik.com/vrije-vector/gradient-achtergrond_1159-750.jpg') no-repeat center center fixed;
+                  background-size:cover;
+    }
+</style>
+</head>
+
+
+<body>
+
+<!--
+<iframe id="audio" allow="autoplay" src="images/Do_Din.mp3" style="display:none"></iframe>
+-->
+
+<audio src="https://pagalworld3.org/14426/03 Nazar Na Lag Jaaye - Stree.mp3" type="audio/mpeg" controls >
+</audio>
+<div class="w3-container w3-lobster">
+  <center><u><i><p class="w3-xxxlarge">Surbhi Chaudhary</p></u></i></center>
+</div>
+<!--
+<img class="img-fluid" src="images/IMG_1479.JPG" width=600 height=600 alt="Cute">
+<img class="img-fluid" src="images/IMG_1806.JPG"  width=600 height=600 alt="Pretty">
+ style="width:100%"
+IMG_1463.JPG  IMG_1479.JPG  IMG_1708.JPG  IMG_1806.JPG  IMG_1859.JPG  IMG_2048.JPG  IMG_2261.JPG
+
+
+-->
+
+<div class="w3-content w3-display-container" style="max-width:500px">
+  <img class="mySlides w3-animate-fading" src="IMG_1479.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_1806.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_1463.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_1708.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_2048.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_1859.JPG" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="IMG_2261.JPG" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+</script>
+
+
+</body>
+</html>
